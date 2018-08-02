@@ -9,7 +9,7 @@
 
 	<name>JQuery UI</name>
 	<artifactId>webjar-jquery-ui</artifactId>
-	<version>1.12.1-SNAPSHOT</version>
+	<version>1.12.1</version>
 	<description>JQuery UI</description>
 
 	<properties>
@@ -39,10 +39,10 @@
 						<id>precompile</id>
 						<configuration>
 							<target>
-								<get src="${src.url}" dest="${src.zipdir}/src.zip"/>
+								<get src="${src.url}" dest="${src.zipdir}/src.zip" />
 								<unzip src="${src.zipdir}/src.zip" dest="${src.tmpdir}" />
 								<move todir="${webjar.target}">
-									<fileset dir="${src.rootdir}" excludes="external/**,*.html,package.json"/>
+									<fileset dir="${src.rootdir}" excludes="external/**,*.html,package.json" />
 								</move>
 							</target>
 						</configuration>
@@ -51,4 +51,8 @@
 			</plugin>
 		</plugins>
 	</build>
+
+  <scm>
+    <tag>1.12.1</tag>
+  </scm>
 </project>
