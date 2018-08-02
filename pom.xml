@@ -8,7 +8,7 @@
 	</parent>
 
 	<name>JQuery UI</name>
-	<artifactId>fujion-jquery-ui</artifactId>
+	<artifactId>webjar-jquery-ui</artifactId>
 	<version>1.12.1-SNAPSHOT</version>
 	<description>JQuery UI</description>
 
