@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "jquery-ui": "jquery-ui.js",
+    "jquery-ui-min": "jquery-ui.min.js",
+    "jquery-ui-css": "jquery-ui.css"
+  }
+}

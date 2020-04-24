@@ -15,19 +15,6 @@
 	<properties>
 		<src.url>http://jqueryui.com/resources/download/jquery-ui-${src.version}.zip</src.url>
 		<src.top>jquery-ui-${src.version}</src.top>
-		<systemjs>
-			{
-				"paths": {
-					"jquery-ui": "jquery-ui",
-					"jquery-ui-min": "jquery-ui.min",
-					"jquery-ui-css": "jquery-ui.css"
-				},
-				"shim": {
-					"jquery-ui": [ "jquery" ],
-					"jquery-ui-min": [ "jquery" ]
-				}
-			}			
-		</systemjs>
 	</properties>
 	
 	<build>
