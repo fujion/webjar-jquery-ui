@@ -28,9 +28,12 @@
 							<target>
 								<get src="${src.url}" dest="${src.zipdir}/src.zip" />
 								<unzip src="${src.zipdir}/src.zip" dest="${src.tmpdir}" />
-								<move todir="${webjar.target}">
-									<fileset dir="${src.rootdir}" excludes="external/**,*.html,package.json" />
-								</move>
+								<copy todir="${webjar.target}">
+									<fileset dir="${src.rootdir}" includes="LICENSE.txt" />
+								</copy>
+								<copy todir="${webjar.target}/dist">
+									<fileset dir="${src.rootdir}" includes="images/,*.css,*.js" />
+								</copy>
 							</target>
 						</configuration>
 					</execution>
