@@ -1,15 +1,6 @@
 {
-  "paths": {
+  "imports": {
     "jquery-ui": "dist/jquery-ui.js",
     "jquery-ui-min": "dist/jquery-ui.min.js",
     "jquery-ui-css": "dist/jquery-ui.css"
-  },
-  "shim": {
-    "jquery-ui": [
-      "jquery"
-    ],
-    "jquery-ui-min": [
-      "jquery"
-    ]
-  }
-}
+  }}
