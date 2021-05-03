@@ -9,7 +9,7 @@
 
 	<name>JQuery UI</name>
 	<artifactId>webjar-jquery-ui</artifactId>
-	<version>1.12.1-2</version>
+	<version>1.12.1-10</version>
 	<description>JQuery UI</description>
 
 	<properties>
