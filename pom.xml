@@ -4,17 +4,18 @@
 	<parent>
 		<groupId>org.fujion.webjars</groupId>
 		<artifactId>fujion-webjars</artifactId>
-		<version>3.0.0</version>
+		<version>3.2.0-SNAPSHOT</version>
 	</parent>
 
 	<name>JQuery UI</name>
 	<artifactId>webjar-jquery-ui</artifactId>
-	<version>1.13.2</version>
+	<version>1.13.2-1</version>
 	<description>JQuery UI</description>
 
 	<properties>
 		<src.url>http://jqueryui.com/resources/download/jquery-ui-${src.version}.zip</src.url>
 		<src.top>jquery-ui-${src.version}</src.top>
+		<npm-install.skip>true</npm-install.skip>
 	</properties>
 	
 	<build>
