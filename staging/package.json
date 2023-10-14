@@ -1,0 +1,11 @@
+{
+  "name": "${project.artifactId}",
+  "version": "${version.unrevise}",
+  "description": "${project.description}",
+  "scripts": {
+    "postinstall": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}

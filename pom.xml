@@ -14,7 +14,7 @@
 
 	<properties>
 		<src.url>http://jqueryui.com/resources/download/jquery-ui-${src.version}.zip</src.url>
-		<src.top>jquery-ui-${src.version}</src.top>
+		<npm-install.skip>false</npm-install.skip>
 	</properties>
 
 	<build>
@@ -29,7 +29,7 @@
 							<rules>
 								<rule>file_exists import-map.json</rule>
 								<rule>file_contains LICENSE.txt "Copyright jQuery Foundation"</rule>
-								<rule>dir_exists dist/images</rule>
+								<rule>file_count dist/images 6</rule>
 								<rule>file_exists dist/jquery-ui.css</rule>
 								<rule>file_exists dist/jquery-ui.js</rule>
 								<rule>file_exists dist/jquery-ui.structure.css</rule>
@@ -47,12 +47,12 @@
 						<configuration>
 							<target>
 								<get src="${src.url}" dest="${src.zipdir}/src.zip" />
-								<unzip src="${src.zipdir}/src.zip" dest="${src.tmpdir}" />
-								<copy todir="${webjar.target}">
-									<fileset dir="${src.rootdir}" includes="LICENSE.txt" />
-								</copy>
-								<copy todir="${webjar.target}/dist">
-									<fileset dir="${src.rootdir}" includes="images/,*.css,*.js" />
+								<unzip src="${src.zipdir}/src.zip" dest="${src.rootdir}"/>
+								<copy todir="${src.rootdir}">
+									<fileset dir="${basedir}/staging" />
+									<filterchain>
+										<expandproperties />
+									</filterchain>
 								</copy>
 							</target>
 						</configuration>
