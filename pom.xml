@@ -14,7 +14,6 @@
 
 	<properties>
 		<src.url>http://jqueryui.com/resources/download/jquery-ui-${src.version}.zip</src.url>
-		<npm-install.skip>false</npm-install.skip>
 	</properties>
 
 	<build>
@@ -24,7 +23,7 @@
 				<artifactId>webjar-validator-maven-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>validate-webjar</id>
+						<id>webjar-validate</id>
 						<configuration>
 							<rules>
 								<rule>file_exists import-map.json</rule>
@@ -46,9 +45,10 @@
 						<id>precompile</id>
 						<configuration>
 							<target>
-								<get src="${src.url}" dest="${src.zipdir}/src.zip" />
-								<unzip src="${src.zipdir}/src.zip" dest="${src.rootdir}"/>
-								<copy todir="${src.rootdir}">
+								<mkdir dir="${webjar.staging}" />
+								<get src="${src.url}" dest="${webjar.staging}/src.zip" />
+								<unzip src="${webjar.staging}/src.zip" dest="${webjar.staging}"/>
+								<copy todir="${webjar.staging}">
 									<fileset dir="${basedir}/staging" />
 									<filterchain>
 										<expandproperties />

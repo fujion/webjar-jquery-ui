@@ -1,6 +1,6 @@
 const {src, dest, series} = require('gulp');
 
-const srcDir = '${src.rootdir}/jquery-ui-${version.unrevise}/';
+const srcDir = '${webjar.staging}/jquery-ui-${version.unrevise}/';
 const destDir = '${webjar.target}/';
 
 function task1() {
