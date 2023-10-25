@@ -1,16 +1,14 @@
 const {src, dest, series} = require('gulp');
 const download = require("gulp-download-stream");
-const rename = require("gulp-rename");
 const unzip = require('gulp-unzip');
 const streamify = require('gulp-streamify');
 
-const srcDir = '${webjar.staging}/src/';
+const srcDir = '${webjar.staging}/jquery-ui-${version.unrevise}/';
 const destDir = '${webjar.target}/';
 
 function task1() {
     return download(`https://jqueryui.com/resources/download/jquery-ui-${version.unrevise}.zip`)
         .pipe(streamify(unzip()))
-        .pipe(rename(path => path.dirname = './src'))
         .pipe(dest('./'));
 }
 
@@ -23,7 +21,7 @@ function task3() {
 }
 
 function task4() {
-    return _copy('*.png', 'dist/images');
+    return _copy('images/**', 'dist/images');
 }
 
 function _toSrc(_src) {
