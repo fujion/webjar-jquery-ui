@@ -12,10 +12,6 @@
 	<version>1.13.2-1-SNAPSHOT</version>
 	<description>JQuery UI</description>
 
-	<properties>
-		<src.url>http://jqueryui.com/resources/download/jquery-ui-${src.version}.zip</src.url>
-	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -34,20 +30,6 @@
 								<rule>file_exists dist/jquery-ui.structure.css</rule>
 								<rule>file_exists dist/jquery-ui.theme.css</rule>
 							</rules>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>precompile</id>
-						<configuration>
-							<target>
-								<get src="${src.url}" dest="${webjar.staging}/src.zip" />
-								<unzip src="${webjar.staging}/src.zip" dest="${webjar.staging}"/>
-							</target>
 						</configuration>
 					</execution>
 				</executions>
